@@ -1,6 +1,6 @@
 {
  "v": 1,
- "ts": 1792663324123,
+ "ts": 1792663414696,
  "routes": [
   {
    "id": 1,
@@ -1211,7 +1211,8 @@
    "tabFun": "🕹️",
    "tabSummary": "⌗",
    "title": "Balance Prime",
-   "credCode": "Code by Claude"
+   "credCode": "Code by Claude",
+   "credTest": "🧪 Test version — routes & features may fake 🤪"
   },
   "th": {
    "addWish": "เล็ง",
@@ -1227,7 +1228,8 @@
    "tabFun": "🕹️",
    "tabSummary": "⌗",
    "title": "Balance Prime",
-   "credCode": "Code by Claude"
+   "credCode": "Code by Claude",
+   "credTest": "🧪 เวอร์ชันทดลอง — รูทและฟีเจอร์อาจเฟค 🤪"
   }
  }
 }
