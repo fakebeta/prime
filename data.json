@@ -1,6 +1,6 @@
 {
  "v": 1,
- "ts": 1792663209991,
+ "ts": 1792663252920,
  "routes": [
   {
    "id": 1,
@@ -1195,7 +1195,8 @@
    "tabClimb": "🧗",
    "tabFun": "🕹️",
    "tabSummary": "⌗",
-   "title": "Balance Prime"
+   "title": "Balance Prime",
+   "credCode": "Code by Claude"
   },
   "th": {
    "addWish": "เล็ง",
@@ -1210,7 +1211,8 @@
    "tabClimb": "🧗",
    "tabFun": "🕹️",
    "tabSummary": "⌗",
-   "title": "Balance Prime"
+   "title": "Balance Prime",
+   "credCode": "Code by Claude"
   }
  }
 }
