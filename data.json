@@ -1,6 +1,6 @@
 {
  "v": 1,
- "ts": 1792746781081,
+ "ts": 1792746799574,
  "routes": [
   {
    "id": 1,
@@ -1473,7 +1473,8 @@
    "tabSummary": "⌗",
    "title": "Balance Prime",
    "tabSession": "🌼",
-   "credCode": " "
+   "credCode": " ",
+   "credBy": "Fake app"
   },
   "th": {
    "addWish": "เล็ง",
@@ -1490,7 +1491,8 @@
    "tabSummary": "⌗",
    "title": "Balance Prime",
    "tabSession": "🌼",
-   "credCode": " "
+   "credCode": " ",
+   "credBy": "Fake app"
   },
   "_mc": {
    "hide": {
