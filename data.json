@@ -1,6 +1,6 @@
 {
  "v": 1,
- "ts": 1792737996566,
+ "ts": 1792738019497,
  "routes": [
   {
    "id": 1,
@@ -1584,7 +1584,7 @@
   "en": {
    "funLevel": "Tag",
    "funRainbow": "✨",
-   "funSub": "Roll it!!",
+   "funSub": "Roll it.. Random route..",
    "funTitle": "🎰   Route-lette ",
    "funUnsent": "Unsent only",
    "slipAgain": "🎲   Roll again..",
