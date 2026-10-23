@@ -1,6 +1,6 @@
 {
  "v": 1,
- "ts": 1792738058934,
+ "ts": 1792738072746,
  "routes": [
   {
    "id": 1,
@@ -1595,7 +1595,8 @@
    "tabSummary": "⌗",
    "title": "Balance Prime",
    "credCode": " ",
-   "credTest": "🧪 Test version - routes & features may fake 🤪 - Code by Claude"
+   "credTest": "🧪 Test version - routes & features may fake 🤪 - Code by Claude",
+   "credBy": " "
   },
   "th": {
    "addWish": "เล็ง",
@@ -1612,7 +1613,8 @@
    "tabSummary": "⌗",
    "title": "Balance Prime",
    "credCode": " ",
-   "credTest": "🧪 เวอร์ชันทดลอง — รูทและฟีเจอร์อาจเฟค 🤪"
+   "credTest": "🧪 เวอร์ชันทดลอง — รูทและฟีเจอร์อาจเฟค 🤪",
+   "credBy": " "
   },
   "_mc": {
    "hide": {
