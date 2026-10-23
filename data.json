@@ -1,6 +1,6 @@
 {
  "v": 1,
- "ts": 1792746774520,
+ "ts": 1792746781081,
  "routes": [
   {
    "id": 1,
@@ -1472,7 +1472,8 @@
    "tabFun": "👻",
    "tabSummary": "⌗",
    "title": "Balance Prime",
-   "tabSession": "🌼"
+   "tabSession": "🌼",
+   "credCode": " "
   },
   "th": {
    "addWish": "เล็ง",
@@ -1488,7 +1489,8 @@
    "tabFun": "👻",
    "tabSummary": "⌗",
    "title": "Balance Prime",
-   "tabSession": "🌼"
+   "tabSession": "🌼",
+   "credCode": " "
   },
   "_mc": {
    "hide": {
