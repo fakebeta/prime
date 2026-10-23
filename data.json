@@ -1,6 +1,6 @@
 {
  "v": 1,
- "ts": 1792737975842,
+ "ts": 1792737996566,
  "routes": [
   {
    "id": 1,
@@ -1585,7 +1585,7 @@
    "funLevel": "Tag",
    "funRainbow": "✨",
    "funSub": "Roll it!!",
-   "funTitle": "🎰   Routelette ",
+   "funTitle": "🎰   Route-lette ",
    "funUnsent": "Unsent only",
    "slipAgain": "🎲   Roll again..",
    "slipNo": "No.",
