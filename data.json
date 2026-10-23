@@ -1,6 +1,6 @@
 {
  "v": 1,
- "ts": 1792746714344,
+ "ts": 1792746737502,
  "routes": [
   {
    "id": 1,
@@ -1469,7 +1469,7 @@
    "slipNo": "No.",
    "slipTitle": " ",
    "tabClimb": "🧗",
-   "tabFun": "🕹️",
+   "tabFun": "👻",
    "tabSummary": "⌗",
    "title": "Balance Prime"
   },
@@ -1484,7 +1484,7 @@
    "funUnsent": "เฉพาะรูทที่ยังไม่จบ",
    "slipAgain": "🎲   เอาอีกกก... จุ่มใหม่",
    "tabClimb": "🧗",
-   "tabFun": "🕹️",
+   "tabFun": "👻",
    "tabSummary": "⌗",
    "title": "Balance Prime"
   },
