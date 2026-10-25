@@ -1281,14 +1281,6 @@ body.cx-edit #ctabs .chip,body.cx-edit .chip[data-cx],body.cx-edit .dot[data-cx]
       };
       _0xNext();
     }, 1200);
-    // stand still while the map is being panned / zoomed
-    let _0xHold = 0;
-    const _0xHoldNow = _0xE => {
-      if (_0xE.type === "wheel" || _0xE.type === "touchmove" || _0xE.buttons || _0xE.pointerType === "touch") {
-        _0xHold = performance.now() + 450;
-      }
-    };
-    ["pointerdown", "pointermove", "wheel", "touchmove"].forEach(_0xT => document.addEventListener(_0xT, _0xHoldNow, { passive: true, capture: true }));
     const _0xDraw = _0xI => {
       const _0xDark = document.documentElement.getAttribute("data-theme") === "dark";
       _0xLy.forEach(_0xL => {
@@ -1334,10 +1326,6 @@ body.cx-edit #ctabs .chip,body.cx-edit .chip[data-cx],body.cx-edit .dot[data-cx]
         return;
       }
       const _0xI = _0xRm || !_0xAnimOn ? 0 : Math.floor(performance.now() / 125) % 4;
-      if (performance.now() < _0xHold) {
-        _0xTimer = setTimeout(_0xStep, 125);
-        return;
-      }
       if (!_0xW.classList.contains("own")) {
         const _0xNm = _0xW.classList.contains("nonames");
         const _0xTh = _0xRoot.getAttribute("data-theme") === "dark" ? "d" : "l";
