@@ -1,0 +1,103 @@
+{
+ "v": 1,
+ "ts": 1793158950852,
+ "routes": [
+  {
+   "id": 1,
+   "no": 1,
+   "x": 0.4836897303719234,
+   "y": 0.27413367449831233,
+   "c": "Y",
+   "g": 9,
+   "st": [],
+   "star": false,
+   "zone": "",
+   "name": "",
+   "setter": "",
+   "date": "2026-10-28",
+   "active": true,
+   "ct": []
+  },
+  {
+   "id": 2,
+   "no": 2,
+   "x": 0.515754357888176,
+   "y": 0.2910069811002176,
+   "c": "Y",
+   "g": 7,
+   "st": [],
+   "star": false,
+   "zone": "",
+   "name": "",
+   "setter": "",
+   "date": "2026-10-28",
+   "active": true,
+   "ct": []
+  }
+ ],
+ "nextNo": 3,
+ "terms": {
+  "myproj": {
+   "e": "🫡"
+  },
+  "prime": {
+   "e": "👾"
+  },
+  "wish": {
+   "e": "👀",
+   "th": "ปักไว้",
+   "en": "Wishlist"
+  },
+  "fav": {
+   "e": "❤️",
+   "th": "ชอบจัด",
+   "en": "Fav"
+  }
+ },
+ "strs": {
+  "en": {
+   "funLevel": "Tag",
+   "funRainbow": "✨",
+   "funSub": "Roll it!!",
+   "funTitle": "🎰   Routelette ",
+   "funUnsent": "Unsent only",
+   "slipAgain": "🎲   Roll again..",
+   "slipNo": "No.",
+   "slipTitle": " ",
+   "tabClimb": "🧗",
+   "tabFun": "👻",
+   "tabSummary": "⌗",
+   "title": "Stonegoat The Parq",
+   "tabSession": "🌼",
+   "credCode": " ",
+   "credBy": "Fake app",
+   "credTest": "🧪 Test version — routes & features may fake 🤞"
+  },
+  "th": {
+   "addWish": "เล็ง",
+   "clear": "เคลียร์",
+   "funLevel": "แท็ก",
+   "funRainbow": " ",
+   "funRolling": "กำลังจุ่ม...",
+   "funSub": "ไม่รู้จะปีนรูทไหนดี? จุ่มเลยยยย",
+   "funTitle": "🎰   กล่องจุ่มรูท ",
+   "funUnsent": "เฉพาะรูทที่ยังไม่จบ",
+   "slipAgain": "🎲   เอาอีกกก... จุ่มใหม่",
+   "tabClimb": "🧗",
+   "tabFun": "👻",
+   "tabSummary": "⌗",
+   "title": "Stonegoat The Parq",
+   "tabSession": "🌼",
+   "credCode": " ",
+   "credBy": "Fake app",
+   "credTest": "🧪 เวอร์ชันทดลอง — รูทและฟีเจอร์อาจเฟค 🤞"
+  },
+  "_mc": {
+   "hide": {
+    "myproj": 1
+   },
+   "tags": [],
+   "sheet": "https://script.google.com/macros/s/AKfycbzoY-FUHKRoJ3TCBCkaFdOZQk_BnIQUj6VPsk5o5j77YaO6zX-KTXE2Y4NBLoomOYsV/exec"
+  }
+ }
+}
