@@ -642,6 +642,9 @@ body.cx-edit #ctabs .chip,body.cx-edit .chip[data-cx],body.cx-edit .dot[data-cx]
       ssOptDate: "วันที่",
       ssOptTitle: "หัวข้อ",
       ssOptChart: "กราฟแท็ก",
+      ssTheme: "ธีมรูป",
+      ssRand: "สุ่มชื่อ",
+      csTitlePh: "SESSION",
       ssOptReal: "แผนที่จริง",
       ssOptBw: "แผนที่ขาวดำ",
       ssOptGym: "ชื่อยิม",
@@ -950,6 +953,9 @@ body.cx-edit #ctabs .chip,body.cx-edit .chip[data-cx],body.cx-edit .dot[data-cx]
       ssOptDate: "Date",
       ssOptTitle: "Title",
       ssOptChart: "Tag chart",
+      ssTheme: "Picture theme",
+      ssRand: "Random",
+      csTitlePh: "SESSION",
       ssOptReal: "Real map",
       ssOptBw: "B&W map",
       ssOptGym: "Gym name",
@@ -3557,10 +3563,13 @@ body.cx-edit #ctabs .chip,body.cx-edit .chip[data-cx],body.cx-edit .dot[data-cx]
     const _0xKeys = Object.keys(_0xGr).sort((_0xa, _0xb) => (isNaN(_0xa) ? 1 : 0) - (isNaN(_0xb) ? 1 : 0) || +_0xa - +_0xb || String(_0xa).localeCompare(String(_0xb)));
     const _0xCsE = { colorful: "🌈", colorlight: "🎨", black: "⚫", white: "⚪" }[_0xCs.col];
     const _0xCsL = { colorful: "ssColorful", colorlight: "ssColorLight", black: "ssBlack", white: "ssWhite" }[_0xCs.col];
-    _0xHtml += "<div class=\"csbig\"><b>" + _0xN + "</b><span data-ts=\"csCount\">" + _0x16cf6b(_0x14f98f("csCount")) + "</span>" + (_0xPQ ? "<button class=\"chip on\" data-ss=\"cscol\" data-ts=\"" + _0xCsL + "\" title=\"" + _0x16cf6b(_0x14f98f(_0xCsL)) + "\" aria-label=\"" + _0x16cf6b(_0x14f98f(_0xCsL)) + "\">" + _0xCsE + "</button>" : "") + "</div>";
+    _0xHtml += "<div class=\"csbig\"><b>" + _0xN + "</b><span data-ts=\"csCount\">" + _0x16cf6b(_0x14f98f("csCount")) + "</span>" + (_0xPQ ? "<button class=\"chip on\" data-ss=\"cscol\" data-ts=\"" + _0xCsL + "\" title=\"" + _0x16cf6b(_0x14f98f(_0xCsL)) + "\" aria-label=\"" + _0x16cf6b(_0x14f98f(_0xCsL)) + "\">" + _0xCsE + "</button>" : "") + "</div>" + (_0xPQ ? "" : "<div class=\"sslbl\" data-ts=\"ssTheme\">" + _0x14f98f("ssTheme") + "</div><div class=\"sstog\">" + [["colorful", "🌈", "ssColorful"], ["colorlight", "🎨", "ssColorLight"], ["black", "⚫", "ssBlack"], ["white", "⚪", "ssWhite"]].map(([_0xk, _0xe, _0xl]) => "<button class=\"chip " + (_0xCs.col === _0xk ? "on" : "") + "\" data-ss=\"cscol\" data-v=\"" + _0xk + "\" data-ts=\"" + _0xl + "\" aria-pressed=\"" + (_0xCs.col === _0xk ? "true" : "false") + "\">" + _0xe + " " + _0x16cf6b(_0x14f98f(_0xl)) + "</button>").join("") + "</div>");
     _0xHtml += "<div class=\"ssprev p" + _0xCs.col[0] + "\" id=\"ss-prev\"></div>";
     _0xHtml += "<div class=\"ssacts\"><button class=\"btn\" data-ss=\"cs-back\" data-ts=\"csBack\">" + _0x16cf6b(_0x14f98f("csBack")) + "</button><button class=\"btn pri\" data-ss=\"share\" data-ts=\"ssShare\">" + _0x16cf6b(_0x14f98f("ssShare")) + "</button></div>";
     _0xHtml += "<p class=\"mut\" data-ts=\"csNote\" style=\"margin:2px 0 0\">" + _0x16cf6b(_0x14f98f("csNote")) + "</p>";
+    if (!_0xPQ) {
+      _0xHtml += "<div class=\"sslbl\" style=\"display:flex;align-items:center;justify-content:space-between\"><span data-ts=\"ssOptTitle\">" + _0x16cf6b(_0x14f98f("ssOptTitle")) + "</span><button class=\"chip sm\" data-ss=\"cs-rand\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5\"/></svg> " + _0x16cf6b(_0x14f98f("ssRand")) + "</button></div><input type=\"text\" id=\"cs-title-in\" maxlength=\"40\" value=\"" + _0x16cf6b(_0xCs.title || "") + "\" placeholder=\"SESSION\" style=\"width:100%;box-sizing:border-box\">";
+    }
     _0xHtml += "<div class=\"sslbl\" data-ts=\"ssShow\">" + _0x14f98f("ssShow") + "</div><div class=\"sstog\">" + _0xTogs.map(([_0xk, _0xl]) => "<button class=\"chip " + (_0xSsOpt[_0xk] ? "on" : "") + "\" data-ss=\"opt\" data-v=\"" + _0xk + "\" data-ts=\"" + _0xl + "\" aria-pressed=\"" + (_0xSsOpt[_0xk] ? "true" : "false") + "\">" + _0x16cf6b(_0x14f98f(_0xl)) + "</button>").join("") + "</div>";
     _0xHtml += "<div class=\"ssacts\"><button class=\"btn\" data-ss=\"cs-new\" data-ts=\"csNew\">" + _0x16cf6b(_0x14f98f("csNew")) + "</button></div>" + _0xCsHow(["csHow4", "csHow5"]);
     _0xEl.innerHTML = _0xHtml;
@@ -3586,7 +3595,7 @@ body.cx-edit #ctabs .chip,body.cx-edit .chip[data-cx],body.cx-edit .dot[data-cx]
     }
     return _0xRealImg;
   }
-  function _0xDrawCustomBp(_0xIds, _0xO) {
+  function _0xDrawCustomBp(_0xIds, _0xO, _0xColor) {
     // Balance Prime picture: map card on top, SESSION title, hold-colour stripe, count + gym/date, curve chart. One fixed colourful look, round markers.
     const _0xW = 1080;
     const _0xP = 56;
@@ -3626,7 +3635,7 @@ body.cx-edit #ctabs .chip,body.cx-edit .chip[data-cx],body.cx-edit .dot[data-cx]
         _0xc.n = _0xAbbr[_0xc.n];
       }
     });
-    const _0xTitle = _0xO.t ? _0x14f98f("csSession").toUpperCase() : "";
+    const _0xTitle = _0xO.t ? (String(_0xCs.title || "").trim() || "SESSION").toUpperCase() : "";
     const _0xGym = _0xO.g ? String(_0x14f98f("title")) : "";
     const _0xDate = _0xO.d ? _0x5e6328() : "";
     const _0xInfo = (_0xGym ? 1 : 0) + (_0xDate ? 1 : 0);
@@ -3639,10 +3648,27 @@ body.cx-edit #ctabs .chip,body.cx-edit .chip[data-cx],body.cx-edit .dot[data-cx]
     _0xCv.height = _0xH;
     const _0xCx = _0xCv.getContext("2d");
     const _0xFont = "-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue','Noto Sans Thai',sans-serif";
-    const _0xInk = "#f4f7f4";
-    const _0xMut = "#9fb0a6";
-    _0xCx.fillStyle = "#12171a";
-    _0xCx.fillRect(0, 0, _0xW, _0xH);
+    const _0xTh = { colorful: ["#12171a", "#f4f7f4", "#9fb0a6"], colorlight: ["#f6f3ec", "#17201b", "#5f6a63"], black: [null, "#111111", "#333333"], white: [null, "#ffffff", "#f0f0f0"] }[_0xColor] || ["#12171a", "#f4f7f4", "#9fb0a6"];
+    const _0xCol = _0xColor === "colorful" || _0xColor === "colorlight";
+    const _0xLt = _0xColor === "black" || _0xColor === "colorlight";
+    const _0xInk = _0xTh[1];
+    const _0xMut = _0xTh[2];
+    const _0xBgC = _0xTh[0] || (_0xColor === "black" ? "#e9e4d8" : "#2d3342");
+    {
+      const _0xBg = _0xCx.createLinearGradient(0, 0, _0xW, _0xH);
+      if (_0xTh[0]) {
+        _0xBg.addColorStop(0, _0xTh[0]);
+        _0xBg.addColorStop(1, _0xTh[0]);
+      } else if (_0xColor === "black") {
+        _0xBg.addColorStop(0, "#f7f3ea");
+        _0xBg.addColorStop(1, "#dbe6ef");
+      } else {
+        _0xBg.addColorStop(0, "#3b4254");
+        _0xBg.addColorStop(1, "#1b1e29");
+      }
+      _0xCx.fillStyle = _0xBg;
+      _0xCx.fillRect(0, 0, _0xW, _0xH);
+    }
     // 1. map card
     _0xCx.save();
     _0xCx.beginPath();
@@ -3681,6 +3707,7 @@ body.cx-edit #ctabs .chip,body.cx-edit .chip[data-cx],body.cx-edit .dot[data-cx]
       }
     }
     _0xCx.restore();
+    const _0xBgRgb = _0xTh[0] ? [parseInt(_0xTh[0].slice(1, 3), 16), parseInt(_0xTh[0].slice(3, 5), 16), parseInt(_0xTh[0].slice(5, 7), 16)] : null;
     if (_0xO.bw) {
       // black & white map: grey the map card only (markers stay in colour)
       try {
@@ -3691,7 +3718,7 @@ body.cx-edit #ctabs .chip,body.cx-edit .chip[data-cx],body.cx-edit .dot[data-cx]
         const _0xId = _0xCx.getImageData(_0xGx, _0xGy, _0xGw, _0xGh);
         const _0xDt = _0xId.data;
         for (let _0xi = 0; _0xi < _0xDt.length; _0xi += 4) {
-          if (_0xDt[_0xi] === 18 && _0xDt[_0xi + 1] === 23 && _0xDt[_0xi + 2] === 26) {
+          if (_0xTh[0] && _0xBgRgb && _0xDt[_0xi] === _0xBgRgb[0] && _0xDt[_0xi + 1] === _0xBgRgb[1] && _0xDt[_0xi + 2] === _0xBgRgb[2]) {
             continue;
           }
           const _0xL = Math.round(_0xDt[_0xi] * 0.299 + _0xDt[_0xi + 1] * 0.587 + _0xDt[_0xi + 2] * 0.114);
@@ -3803,7 +3830,9 @@ body.cx-edit #ctabs .chip,body.cx-edit .chip[data-cx],body.cx-edit .dot[data-cx]
       }
       _0xY += _0xFt * 0.92;
       let _0xFill = _0xInk;
-      if (_0xGrad.length >= 2) {
+      if (!_0xCol) {
+        _0xFill = _0xInk;
+      } else if (_0xGrad.length >= 2) {
         const _0xG = _0xCx.createLinearGradient(_0xP, 0, _0xP + _0xTw, 0);
         _0xGrad.forEach((_0xc, _0xi) => _0xG.addColorStop(_0xi / (_0xGrad.length - 1), _0xc));
         _0xFill = _0xG;
@@ -3830,7 +3859,7 @@ body.cx-edit #ctabs .chip,body.cx-edit .chip[data-cx],body.cx-edit .dot[data-cx]
       if (_0xSeg.length) {
         _0xSeg.forEach(_0xs => {
           const _0xw = _0xSw * _0xs.n / (_0xSel.length || 1);
-          _0xCx.fillStyle = _0xs.c === "#111" ? "#3a3f46" : _0xs.c;
+          _0xCx.fillStyle = _0xs.c === "#111" ? (_0xLt ? "#111111" : "#3a3f46") : _0xs.c;
           _0xCx.fillRect(_0xSx, _0xY, _0xw + 1, 16);
           _0xSx += _0xw;
         });
@@ -3883,8 +3912,11 @@ body.cx-edit #ctabs .chip,body.cx-edit .chip[data-cx],body.cx-edit .dot[data-cx]
       const _0xX1 = _0xW - _0xP - 10;
       const _0xTop = _0xY + 64;
       const _0xBs = _0xY + 270;
-      const _0xPal = [["#ff5fa2", "#ffb347"], ["#4fd8ff", "#7b8cff"], ["#b6ff5e", "#ffe14d"], ["#ff8a5e", "#ff4d8d"], ["#c07bff", "#4fd8ff"]];
+      const _0xPal = _0xColor === "colorlight" ? [["#ff2f7e", "#ff8a1f"], ["#1f7aff", "#8a3dff"], ["#0fae7a", "#5fb41a"], ["#ff6a2f", "#e0245e"], ["#8a3dff", "#1f9fe0"]] : [["#ff5fa2", "#ffb347"], ["#4fd8ff", "#7b8cff"], ["#b6ff5e", "#ffe14d"], ["#ff8a5e", "#ff4d8d"], ["#c07bff", "#4fd8ff"]];
       const _0xPaint = _0xI => {
+        if (!_0xCol) {
+          return _0xInk;
+        }
         const _0xG = _0xCx.createLinearGradient(_0xX0, 0, _0xX1, 0);
         _0xG.addColorStop(0, _0xPal[_0xI % 5][0]);
         _0xG.addColorStop(1, _0xPal[_0xI % 5][1]);
@@ -3892,7 +3924,7 @@ body.cx-edit #ctabs .chip,body.cx-edit .chip[data-cx],body.cx-edit .dot[data-cx]
       };
       const _0xMax = Math.max(1, ..._0xCats.map(_0xc => _0xc.v));
       const _0xPts = _0xCats.map((_0xc, _0xi) => ({ x: _0xX0 + (_0xX1 - _0xX0) * _0xi / (_0xCats.length - 1), y: _0xBs - (_0xBs - _0xTop) * _0xc.v / _0xMax, c: _0xc }));
-      _0xCx.fillStyle = "rgba(255,255,255,.35)";
+      _0xCx.fillStyle = _0xLt ? "rgba(13,13,16,.3)" : "rgba(255,255,255,.35)";
       _0xCx.fillRect(_0xP, _0xBs, _0xW - 2 * _0xP, 3);
       const _0xCurve = () => {
         _0xCx.beginPath();
@@ -3909,8 +3941,8 @@ body.cx-edit #ctabs .chip,body.cx-edit .chip[data-cx],body.cx-edit .dot[data-cx]
       _0xCx.lineTo(_0xPts[0].x, _0xBs);
       _0xCx.closePath();
       const _0xAg = _0xCx.createLinearGradient(0, _0xTop, 0, _0xBs);
-      _0xAg.addColorStop(0, "rgba(255,255,255,.28)");
-      _0xAg.addColorStop(1, "rgba(255,255,255,0)");
+      _0xAg.addColorStop(0, _0xLt ? "rgba(13,13,16,.28)" : "rgba(255,255,255,.28)");
+      _0xAg.addColorStop(1, _0xLt ? "rgba(13,13,16,0)" : "rgba(255,255,255,0)");
       _0xCx.fillStyle = _0xAg;
       _0xCx.fill();
       _0xCurve();
@@ -3933,7 +3965,7 @@ body.cx-edit #ctabs .chip,body.cx-edit .chip[data-cx],body.cx-edit .dot[data-cx]
         _0xCx.globalAlpha = 1;
         _0xCx.textAlign = "center";
         if (_0xHas) {
-          _0xCx.fillStyle = "#ffffff";
+          _0xCx.fillStyle = _0xInk;
           _0xCx.font = "800 30px " + _0xFont;
           _0xCx.fillText(String(_0xp.c.v), _0xp.x, _0xp.y - 20);
         }
@@ -3951,11 +3983,16 @@ body.cx-edit #ctabs .chip,body.cx-edit .chip[data-cx],body.cx-edit .dot[data-cx]
           _0xCx.beginPath();
           _0xCx.arc(_0xLx, _0xBs + 34, Math.max(26, _0xLw2 / 2 + 8), 0, Math.PI * 2);
           const _0xDc = _0xDom[String(_0xp.c.g)];
-          _0xCx.fillStyle = _0xDc && _0xDc !== "#111" ? _0xDc : _0xPaint(3);
-          _0xCx.globalAlpha = _0xDc && _0xDc !== "#111" ? 0.55 : 0.3;
+          if (_0xCol) {
+            _0xCx.fillStyle = _0xDc && _0xDc !== "#111" ? _0xDc : _0xPaint(3);
+            _0xCx.globalAlpha = _0xColor === "colorlight" ? 0.35 : _0xDc && _0xDc !== "#111" ? 0.55 : 0.3;
+          } else {
+            _0xCx.fillStyle = _0xLt ? "rgba(13,13,16,.14)" : "rgba(255,255,255,.2)";
+            _0xCx.globalAlpha = 1;
+          }
           _0xCx.fill();
           _0xCx.globalAlpha = 1;
-          _0xCx.fillStyle = "#ffffff";
+          _0xCx.fillStyle = _0xColor === "colorful" ? "#ffffff" : _0xInk;
           _0xCx.textAlign = "center";
           _0xCx.fillText(_0xLb, _0xLx, _0xBs + 42);
         }
@@ -3966,7 +4003,7 @@ body.cx-edit #ctabs .chip,body.cx-edit .chip[data-cx],body.cx-edit .dot[data-cx]
   }
   function _0xDrawCustom(_0xIds, _0xColor, _0xO) {
     if (!_0xPQ) {
-      return _0xDrawCustomBp(_0xIds, _0xO);
+      return _0xDrawCustomBp(_0xIds, _0xO, _0xColor);
     }
     // The whole floor plan, full size; the count / title sit on the big empty block at the right
     // (where the side menu normally is). Only the picked routes get a marker.
@@ -4438,6 +4475,21 @@ body.cx-edit #ctabs .chip,body.cx-edit .chip[data-cx],body.cx-edit .dot[data-cx]
     _0xCv.id = "ss-cv";
     _0x2ed19b("#ss-prev").appendChild(_0xCv);
   }
+  function _0xCsRedraw() {
+    const _0xOld = _0x2ed19b("#cs-cv");
+    if (!_0xOld || !_0xCs.done) {
+      return;
+    }
+    const _0xNew = _0xDrawCustom(_0xCs.sel, _0xCs.col, _0xSsOpt);
+    _0xNew.id = "cs-cv";
+    _0xOld.replaceWith(_0xNew);
+  }
+  _0x2ed19b("#ss").addEventListener("input", _0xe => {
+    if (_0xe.target.id === "cs-title-in") {
+      _0xCs.title = _0xe.target.value;
+      _0xCsRedraw();
+    }
+  });
   _0x2ed19b("#ss").addEventListener("change", _0xe => {
     if (_0xe.target.id === "ss-day") {
       _0xSsDay = _0xe.target.value;
@@ -4482,8 +4534,22 @@ body.cx-edit #ctabs .chip,body.cx-edit .chip[data-cx],body.cx-edit .dot[data-cx]
     }
     if (_0xa === "cscol") {
       const _0xOrd = ["colorful", "colorlight", "black", "white"];
-      _0xCs.col = _0xOrd[(_0xOrd.indexOf(_0xCs.col) + 1) % _0xOrd.length];
+      _0xCs.col = _0xB.dataset.v && _0xOrd.includes(_0xB.dataset.v) ? _0xB.dataset.v : _0xOrd[(_0xOrd.indexOf(_0xCs.col) + 1) % _0xOrd.length];
       _0xRenderSession();
+      return;
+    }
+    if (_0xa === "cs-rand") {
+      const _0xTs = ["Peen Bao Bao", "Chill-sesh", "Fake Beta Energy", "Chalk & Talk", "Pump Fiction", "Send Me Beta", "Lazy Legs Club", "Grip It, Rip It", "Peen Mun Mak", "One More Try"];
+      let _0xR;
+      do {
+        _0xR = _0xTs[Math.floor(Math.random() * _0xTs.length)];
+      } while (_0xR === _0xCs.title);
+      _0xCs.title = _0xR;
+      const _0xIn = _0x2ed19b("#cs-title-in");
+      if (_0xIn) {
+        _0xIn.value = _0xR;
+      }
+      _0xCsRedraw();
       return;
     }
     if (_0xa === "cs-back") {
