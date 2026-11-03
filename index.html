@@ -3800,21 +3800,25 @@ body.cx-edit #ctabs .chip,body.cx-edit .chip[data-cx],body.cx-edit .dot[data-cx]
     });
     _0xCx.textBaseline = "alphabetic";
     _0xCx.textAlign = "left";
-    // one stripe segment per grade (easiest -> hardest), coloured by that grade's most common hold colour
+    // stripe: grades easiest -> hardest, inside each grade one segment per hold colour (every colour that was sent shows up)
+    const _0xCOrd = Object.keys(_0x3caab6);
     const _0xDom = {};
-    Object.keys(_0xGr).forEach(_0xk => {
+    const _0xGk = Object.keys(_0xGr).sort((_0xa, _0xb) => _0x49f419(isNaN(_0xa) ? _0xa : +_0xa) - _0x49f419(isNaN(_0xb) ? _0xb : +_0xb));
+    const _0xSeg = [];
+    _0xGk.forEach(_0xk => {
       const _0xCc = {};
       _0xSel.filter(_0xr => String(_0xr.g) === _0xk).forEach(_0xr => {
         _0xCc[_0xr.c] = (_0xCc[_0xr.c] || 0) + 1;
       });
-      const _0xTop = Object.keys(_0xCc).sort((_0xa, _0xb) => _0xCc[_0xb] - _0xCc[_0xa])[0];
-      _0xDom[_0xk] = _0x3caab6[_0xTop] ? _0x3caab6[_0xTop][1] : "#888";
+      Object.keys(_0xCc).sort((_0xa, _0xb) => _0xCOrd.indexOf(_0xa) - _0xCOrd.indexOf(_0xb)).forEach(_0xc => {
+        const _0xHex = _0x3caab6[_0xc] ? _0x3caab6[_0xc][1] : "#888";
+        if (_0xSeg.length && _0xSeg[_0xSeg.length - 1].c === _0xHex) {
+          _0xSeg[_0xSeg.length - 1].n += _0xCc[_0xc];
+        } else {
+          _0xSeg.push({ c: _0xHex, n: _0xCc[_0xc] });
+        }
+      });
     });
-    const _0xSeg = Object.keys(_0xGr).sort((_0xa, _0xb) => {
-      const _0xA = _0x49f419(isNaN(_0xa) ? _0xa : +_0xa);
-      const _0xB = _0x49f419(isNaN(_0xb) ? _0xb : +_0xb);
-      return _0xA - _0xB;
-    }).map(_0xk => ({ c: _0xDom[_0xk], n: _0xGr[_0xk] }));
     const _0xGrad = Array.from(new Set(_0xSeg.map(_0xs => _0xs.c).filter(_0xc => _0xc !== "#111")));
     let _0xY = _0xY0;
     let _0xTw = 0;
@@ -3969,32 +3973,27 @@ body.cx-edit #ctabs .chip,body.cx-edit .chip[data-cx],body.cx-edit .dot[data-cx]
           _0xCx.font = "800 30px " + _0xFont;
           _0xCx.fillText(String(_0xp.c.v), _0xp.x, _0xp.y - 20);
         }
-        if (_0xNReal <= 7 || (_0xi - 1) % 2 === 0 || isNaN(+_0xp.c.n)) {
-          const _0xSlot = Math.max(60, (_0xX1 - _0xX0) / Math.max(1, _0xCats.length - 1)) * (_0xNReal > 7 ? 2 : 1);
+        {
+          // a label for every grade played: same size, same colour, never touching its neighbours
+          const _0xGap = (_0xX1 - _0xX0) / Math.max(1, _0xCats.length - 1);
+          const _0xRr = Math.max(14, Math.min(30, _0xGap / 2 - 4));
           let _0xLb = String(_0xp.c.n);
           let _0xLf = 24;
           _0xCx.font = "700 " + _0xLf + "px " + _0xFont;
-          while (_0xCx.measureText(_0xLb).width > _0xSlot - 8 && _0xLf > 17) {
+          while (_0xCx.measureText(_0xLb).width > _0xRr * 2 - 8 && _0xLf > 12) {
             _0xLf -= 1;
             _0xCx.font = "700 " + _0xLf + "px " + _0xFont;
           }
-          const _0xLw2 = _0xCx.measureText(_0xLb).width;
-          const _0xLx = Math.min(_0xW - _0xP + 20 - _0xLw2 / 2, Math.max(_0xP - 20 + _0xLw2 / 2, _0xp.x));
+          const _0xLx = Math.min(_0xW - _0xP + 20 - _0xRr, Math.max(_0xP - 20 + _0xRr, _0xp.x));
           _0xCx.beginPath();
-          _0xCx.arc(_0xLx, _0xBs + 34, Math.max(26, _0xLw2 / 2 + 8), 0, Math.PI * 2);
-          const _0xDc = _0xDom[String(_0xp.c.g)];
-          if (_0xCol) {
-            _0xCx.fillStyle = _0xDc && _0xDc !== "#111" ? _0xDc : _0xPaint(3);
-            _0xCx.globalAlpha = _0xColor === "colorlight" ? 0.35 : _0xDc && _0xDc !== "#111" ? 0.55 : 0.3;
-          } else {
-            _0xCx.fillStyle = _0xLt ? "rgba(13,13,16,.14)" : "rgba(255,255,255,.2)";
-            _0xCx.globalAlpha = 1;
-          }
+          _0xCx.arc(_0xLx, _0xBs + 34, _0xRr, 0, Math.PI * 2);
+          _0xCx.fillStyle = _0xLt ? "rgba(13,13,16,.14)" : "rgba(255,255,255,.2)";
           _0xCx.fill();
-          _0xCx.globalAlpha = 1;
-          _0xCx.fillStyle = _0xColor === "colorful" ? "#ffffff" : _0xInk;
+          _0xCx.fillStyle = _0xInk;
           _0xCx.textAlign = "center";
-          _0xCx.fillText(_0xLb, _0xLx, _0xBs + 42);
+          _0xCx.textBaseline = "middle";
+          _0xCx.fillText(_0xLb, _0xLx, _0xBs + 34 + 1);
+          _0xCx.textBaseline = "alphabetic";
         }
         _0xCx.textAlign = "left";
       });
